@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/franciscomurillo/Documents/ceutec/programacion3/semana3/poo/main'
+relocations:     []
+...
