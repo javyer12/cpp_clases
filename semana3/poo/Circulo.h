@@ -1,42 +1,86 @@
+// #ifndef CIRCULO_H
+// #define CIRCULO_H
+
+// class Circulo
+// {
+// public:
+//     Circulo();
+//     Circulo(double radio, double origenX, double origenY, int colorBorde, int colorRelleno);
+//     ~Circulo();
+//     //funciones de acceso, get, set, admon de atributos, mutadores
+//     double getRadio() const;
+//     double setRadio(double radio);
+
+//     double getOrigenX() const;
+//     double setOrigenX(double origenX);
+
+//     double getOrigenY() const;
+//     double setOrigenY(double origenY);
+
+//     int getColorBorde() const;
+//     int setColorBorde(int colorBorde);
+
+//     int getColorRelleno() const;
+//     int setColorRelleno(int colorRelleno);
+
+//     //funciones de utilidad, mensaje, proposito, actividad, problema que resuelve, comportamiento, acciones, metodos
+//     double CalcularPerimetro() const;
+//     double CalcularArea() const;
+//     void  MostrarAtributos() const;
+
+// private: //implementar principio de encapsulamiento.
+//     // atributos, propiedades, caracteristicas
+//     //  variables de instancia
+//     double radio;
+//     double origenX, origenY;
+//     int colorBorde, colorRelleno;
+// };
+
+// #endif
+
+// // g++ main.cpp Circulo.cpp -o Circulo
+// //en este archivo solo se declaran los atributos y metodos de la clase, no se implementan, solo se declaran.
+
 #ifndef CIRCULO_H
 #define CIRCULO_H
 
 class Circulo
 {
 public:
-    Circulo();
-    Circulo(double radio, double origenX, double origenY, int colorBorde, int colorRelleno);
+    // Comportamiento.
+    // Constructor(es)
+
+    Circulo(); // por defecto.
+    // Circulo(double, double, double);
+
     ~Circulo();
-    //funciones de acceso, get, set, admon de atributos, mutadores
-    double getRadio() const;
-    double setRadio(double radio);
+
+    // Funciones de acceso, get y set, administradores de atributos, mutadores.
+
+    double getRadio() const; // const porque no modifica el atributo.
+    double setRadio(double); // modifica, reasigna, el atributo radio.
 
     double getOrigenX() const;
-    double setOrigenX(double origenX);
+    double setOrigenX(double);
 
     double getOrigenY() const;
-    double setOrigenY(double origenY);
+    double setOrigenY(double);
 
-    int getColorBorde() const;
-    int setColorBorde(int colorBorde);
+    // Funciones de utilidad, mensajes, propósito, actividad, problemas que resuelve, acciones
+    // del objeto, procesos que hace el objeto.
 
-    int getColorRelleno() const;
-    int setColorRelleno(int colorRelleno);
-
-    //funciones de utilidad, mensaje, proposito, actividad, problema que resuelve, comportamiento, acciones, metodos
     double calcularPerimetro() const;
-    double CalcularArea() const;
-    void  mostrarAtributos() const;
+    double calcularArea() const;
 
-private: //implementar principio de encapsulamiento.
-    // atributos, propiedades, caracteristicas
-    //  variables de instancia
+    void mostrarAtributos() const;
+
+private: // Implementar principio de encapsulamiento.
+    // Atributos, propiedades, características.
+    //  Variables de instancia.
+
     double radio;
     double origenX, origenY;
     int colorBorde, colorRelleno;
 };
 
-#endif
-
-// g++ main.cpp Circulo.cpp -o Circulo
-//en este archivo solo se declaran los atributos y metodos de la clase, no se implementan, solo se declaran.
+#endif // CIRCULO_H
