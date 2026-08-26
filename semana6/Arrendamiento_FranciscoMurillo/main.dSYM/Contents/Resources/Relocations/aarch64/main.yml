@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/franciscomurillo/Documents/ceutec/programacion3/semana6/Arrendamiento/main'
+relocations:     []
+...
