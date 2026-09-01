@@ -7,6 +7,7 @@ using namespace std;
 
 int CrearArchivoTexto(string);
 int CrearArchivoBinario(string);
+int LeerArchivoSecuencial(string);
 int main()
 {
     cout << "Hello world!" << endl;
@@ -16,6 +17,8 @@ int main()
         cout << "Archivo de texto creado exitosamente." << endl;
     else
         cout << "Error al crear el archivo de texto." << endl;
+        
+    LeerArchivoSecuencial("clientes.txt");
     return 0;
 }
 int CrearArchivoTexto(string nombreArchivo)
@@ -48,5 +51,27 @@ int CrearArchivoTexto(string nombreArchivo)
 }
 int CrearArchivoBinario(string nombreArchivo)
 {
+    return 0;
+}
+//lectura de datos de un archvio secuencial
+
+int LeerArchivoSecuencial(string nombreArchivo){
+    ifstream archivo(nombreArchivo.data(), ios::in);
+    if(!archivo){
+        cout << "Error al abrir el archivo." << endl;
+        return -1;
+    }
+    int id;
+    char nombre[50];
+    double saldo;
+
+    archivo >> id >> nombre >> saldo;
+    cout << "ID\tNombre\tSaldo" << endl;
+    cout << "-------------------------" << endl;
+    while(archivo && !archivo.eof()){
+        cout << id << "\t" << nombre << "\t" << saldo << endl;
+        archivo >> id >> nombre >> saldo;
+    }
+    archivo.close();
     return 0;
 }
